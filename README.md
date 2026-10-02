@@ -1,10 +1,37 @@
 # pentrix-headers
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
+[![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Dependencies](https://img.shields.io/badge/dependencies-zero-brightgreen.svg)](#install)
+[![Platform](https://img.shields.io/badge/platform-any-lightgrey.svg)](#install)
 
 Grade any website's HTTP security headers from **A to F** with one-line fix advice for every finding. Zero dependencies, standard library only.
+
+## Contents
+
+- [Screenshots](#screenshots)
+- [Features](#features)
+- [Grading rubric](#grading-rubric)
+- [Install](#install)
+- [Usage](#usage)
+- [Exit codes](#exit-codes)
+- [Ethical use](#ethical-use)
+- [License](#license)
+
+## Screenshots
+
+A failing scan of `example.com` (25/100, grade F):
+
+![pentrix-headers scan of example.com, grade F](docs/images/scan-fail.png)
+
+A strong scan of `github.com` (95/100, grade A):
+
+![pentrix-headers scan of github.com, grade A](docs/images/scan-pass.png)
+
+Built-in help:
+
+![pentrix-headers --help output](docs/images/help.png)
 
 ## Features
 
@@ -125,6 +152,10 @@ Grade: A
 | 0 | scan completed |
 | 1 | network or fetch error (DNS failure, timeout, refused redirect) |
 | 2 | bad arguments |
+
+## Ethical use
+
+This tool is for defensive security work: auditing your own sites, client sites with written authorization, and public demo targets used for education. Only scan systems you own or have explicit permission to test. A header scan is read-only and non-intrusive, but scanning someone else's infrastructure without consent is still not acceptable. Use what you learn to fix headers, not to target the weaknesses you find.
 
 ## License
 
